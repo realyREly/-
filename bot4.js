@@ -540,34 +540,34 @@ if (command == "embed") {
 });
 
 
+
 client.on('message', message => {
 if (message.content.startsWith(prefix + 'help')) { /// This is The DMS Code Send The Help In DMS // Code By NotGucci
     let pages = [`
-= = = = = = = = = = = = = = = = =
+༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻
 
 :earth_africa: The Public Commands :earth_africa: 
 
-1༺༻   ``+cc``  | صناعة الالوان  + وضع كم لون ༺༻
+1༺༻   +cc  | صناعة الالوان  + وضع كم لون ༺༻
 
-2༺༻  ``+bots``  | لمعرفة كم بوت في السيرفر ༺༻
+2༺༻ +bots | لمعرفة كم بوت في السيرفر ༺༻
 
-3༺༻  ``+mutechannel``  | لتقفيل الشات ༺༻
+3༺༻  +mutechannel  | لتقفيل الشات ༺༻
 
-2༺༻  ``+unmutechannel``  | لفتح الشات ༺༻
+2༺༻  +unmutechannel  | لفتح الشات ༺༻
 
-4༺༻  ``+bots``  | لمعرفة كم بوت في السيرفر ༺༻
+4༺༻ +bots | لمعرفة كم بوت في السيرفر ༺༻
 
 
-= = = = = = = = = = = = = = = = =
+༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻
 
 Click On ▶ To Go Administor Side
    `
 ,`
-= = = = = = = = = = = = = = = = =
-
+༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻
 :closed_lock_with_key: الاوامر _الادارة:closed_lock_with_key: 
 
-1༺༻  $clear | مسح الشات برقم༺༻
+1༺༻  +clear | مسح الشات برقم༺༻
 
 2༺༻  +bc | ارسال بردكسات༺༻
 
@@ -575,16 +575,15 @@ Click On ▶ To Go Administor Side
 
 4༺༻  +ban | اعطاء الشخص باند + ارسال له رساله في الخاص༺༻
 
-= = = = = = = = = = = = = = = = =
+༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻
 
 Click On ▶ To Go To Bot Info
    `,`
-= = = = = = = = = = = = = = = = =
+༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻
 
 1༺༻  There is Commands Just For NotGucci | Bot By:REALy༺༻
 
-= = = = = = = = = = = = = = = = =
-
+༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻
    `]
     let page = 1;
 
@@ -631,31 +630,30 @@ Click On ▶ To Go To Bot Info
 client.on('message', message => {
 if (message.content.startsWith(prefix + 'Help')) { /// And This is The Channel One Send The Help In Channel // Code By NotGucci
     let pages = [`
-= = = = = = = = = = = = = = = = =
+༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻
 
 :earth_africa: The Public Commands :earth_africa: 
 
-1༺༻   ``+cc``  | صناعة الالوان  + وضع كم لون ༺༻
+1༺༻   +cc  | صناعة الالوان  + وضع كم لون ༺༻
 
-2༺༻  ``+bots``  | لمعرفة كم بوت في السيرفر ༺༻
+2༺༻ +bots | لمعرفة كم بوت في السيرفر ༺༻
 
-3༺༻  ``+mutechannel``  | لتقفيل الشات ༺༻
+3༺༻  +mutechannel  | لتقفيل الشات ༺༻
 
-2༺༻  ``+unmutechannel``  | لفتح الشات ༺༻
+2༺༻  +unmutechannel  | لفتح الشات ༺༻
 
-4༺༻  ``+bots``  | لمعرفة كم بوت في السيرفر ༺༻
+4༺༻ +bots | لمعرفة كم بوت في السيرفر ༺༻
 
 
-= = = = = = = = = = = = = = = = =
+༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻
 
 Click On ▶ To Go Administor Side
    `
 ,`
-= = = = = = = = = = = = = = = = =
-
+༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻
 :closed_lock_with_key: الاوامر _الادارة:closed_lock_with_key: 
 
-1༺༻  $clear | مسح الشات برقم༺༻
+1༺༻  +clear | مسح الشات برقم༺༻
 
 2༺༻  +bc | ارسال بردكسات༺༻
 
@@ -663,16 +661,15 @@ Click On ▶ To Go Administor Side
 
 4༺༻  +ban | اعطاء الشخص باند + ارسال له رساله في الخاص༺༻
 
-= = = = = = = = = = = = = = = = =
+༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻
 
 Click On ▶ To Go To Bot Info
    `,`
-= = = = = = = = = = = = = = = = =
+༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻
 
 1༺༻  There is Commands Just For NotGucci | Bot By:REALy༺༻
 
-= = = = = = = = = = = = = = = = =
-   `]
+༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻   `]
  let page = 1;
 
     let embed = new Discord.RichEmbed()
@@ -716,8 +713,6 @@ Click On ▶ To Go To Bot Info
     })
     }
 }); 
-
-
 
 
 
