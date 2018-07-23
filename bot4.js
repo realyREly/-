@@ -516,4 +516,209 @@ if(ra3d.content.startsWith(prefix + '+cc')) {
 
 
 
+
+client.on('message', message => {
+  if (message.author.bot) return;
+  if (!message.content.startsWith(prefix)) return;
+
+  let command = message.content.split(" ")[0];
+  command = command.slice(prefix.length);
+
+  let args = message.content.split(" ").slice(1);
+  
+ 
+
+if (command == "embed") {
+    let say = new Discord.RichEmbed()
+    .setDescription(args.join("  "))
+    .setColor(0x23b2d6)
+    message.channel.sendEmbed(say);
+    message.delete();
+  }
+
+
+});
+
+
+client.on('message', message => {
+if (message.content.startsWith(prefix + 'help')) { /// This is The DMS Code Send The Help In DMS // Code By NotGucci
+    let pages = [`
+= = = = = = = = = = = = = = = = =
+
+:earth_africa: The Public Commands :earth_africa: 
+
+1༺༻   ``+cc``  | صناعة الالوان  + وضع كم لون ༺༻
+
+2༺༻  ``+bots``  | لمعرفة كم بوت في السيرفر ༺༻
+
+3༺༻  ``+mutechannel``  | لتقفيل الشات ༺༻
+
+2༺༻  ``+unmutechannel``  | لفتح الشات ༺༻
+
+4༺༻  ``+bots``  | لمعرفة كم بوت في السيرفر ༺༻
+
+
+= = = = = = = = = = = = = = = = =
+
+Click On ▶ To Go Administor Side
+   `
+,`
+= = = = = = = = = = = = = = = = =
+
+:closed_lock_with_key: الاوامر _الادارة:closed_lock_with_key: 
+
+1༺༻  $clear | مسح الشات برقم༺༻
+
+2༺༻  +bc | ارسال بردكسات༺༻
+
+3༺༻  +kick | طرد الشخص + ارسال رسالة له في الخاص༺༻
+
+4༺༻  +ban | اعطاء الشخص باند + ارسال له رساله في الخاص༺༻
+
+= = = = = = = = = = = = = = = = =
+
+Click On ▶ To Go To Bot Info
+   `,`
+= = = = = = = = = = = = = = = = =
+
+1༺༻  There is Commands Just For NotGucci | Bot By:REALy༺༻
+
+= = = = = = = = = = = = = = = = =
+
+   `]
+    let page = 1;
+
+    let embed = new Discord.RichEmbed()
+    .setColor('RANDOM')
+    .setFooter(`Page ${page} of ${pages.length}`)
+    .setDescription(pages[page-1])
+
+    message.author.sendEmbed(embed).then(msg => {
+
+        msg.react('◀').then( r => {
+            msg.react('▶')
+
+
+        const backwardsFilter = (reaction, user) => reaction.emoji.name === '◀' && user.id === message.author.id;
+        const forwardsFilter = (reaction, user) => reaction.emoji.name === '▶' && user.id === message.author.id;
+
+
+        const backwards = msg.createReactionCollector(backwardsFilter, { time: 2000000});
+        const forwards = msg.createReactionCollector(forwardsFilter, { time: 2000000});
+
+
+
+        backwards.on('collect', r => {
+            if (page === 1) return;
+            page--;
+            embed.setDescription(pages[page-1]);
+            embed.setFooter(`Page ${page} of ${pages.length}`);
+            msg.edit(embed)
+        })
+        forwards.on('collect', r => {
+            if (page === pages.length) return;
+            page++;
+            embed.setDescription(pages[page-1]);
+            embed.setFooter(`Page ${page} of ${pages.length}`);
+            msg.edit(embed)
+        })
+        })
+    })
+    }
+}); 
+
+
+client.on('message', message => {
+if (message.content.startsWith(prefix + 'Help')) { /// And This is The Channel One Send The Help In Channel // Code By NotGucci
+    let pages = [`
+= = = = = = = = = = = = = = = = =
+
+:earth_africa: The Public Commands :earth_africa: 
+
+1༺༻   ``+cc``  | صناعة الالوان  + وضع كم لون ༺༻
+
+2༺༻  ``+bots``  | لمعرفة كم بوت في السيرفر ༺༻
+
+3༺༻  ``+mutechannel``  | لتقفيل الشات ༺༻
+
+2༺༻  ``+unmutechannel``  | لفتح الشات ༺༻
+
+4༺༻  ``+bots``  | لمعرفة كم بوت في السيرفر ༺༻
+
+
+= = = = = = = = = = = = = = = = =
+
+Click On ▶ To Go Administor Side
+   `
+,`
+= = = = = = = = = = = = = = = = =
+
+:closed_lock_with_key: الاوامر _الادارة:closed_lock_with_key: 
+
+1༺༻  $clear | مسح الشات برقم༺༻
+
+2༺༻  +bc | ارسال بردكسات༺༻
+
+3༺༻  +kick | طرد الشخص + ارسال رسالة له في الخاص༺༻
+
+4༺༻  +ban | اعطاء الشخص باند + ارسال له رساله في الخاص༺༻
+
+= = = = = = = = = = = = = = = = =
+
+Click On ▶ To Go To Bot Info
+   `,`
+= = = = = = = = = = = = = = = = =
+
+1༺༻  There is Commands Just For NotGucci | Bot By:REALy༺༻
+
+= = = = = = = = = = = = = = = = =
+   `]
+ let page = 1;
+
+    let embed = new Discord.RichEmbed()
+    .setColor('RANDOM')
+    .setFooter(`Page ${page} of ${pages.length}`)
+    .setDescription(pages[page-1])
+
+    message.channel.sendEmbed(embed).then(msg => {
+
+        msg.react('◀').then( r => {
+            msg.react('▶')
+
+           setTimeout(() => {
+        msg.delete
+    }, 60 * 1000)
+
+        const backwardsFilter = (reaction, user) => reaction.emoji.name === '◀' && user.id === message.author.id;
+        const forwardsFilter = (reaction, user) => reaction.emoji.name === '▶' && user.id === message.author.id;
+
+
+        const backwards = msg.createReactionCollector(backwardsFilter, { time: 2000000});
+        const forwards = msg.createReactionCollector(forwardsFilter, { time: 2000000});
+
+
+
+        backwards.on('collect', r => {
+            if (page === 1) return;
+            page--;
+            embed.setDescription(pages[page-1]);
+            embed.setFooter(`Page ${page} of ${pages.length}`);
+            msg.edit(embed)
+        })
+        forwards.on('collect', r => {
+            if (page === pages.length) return;
+            page++;
+            embed.setDescription(pages[page-1]);
+            embed.setFooter(`Page ${page} of ${pages.length}`);
+            msg.edit(embed)
+        })
+        })
+    })
+    }
+}); 
+
+
+
+
+
 client.login(process.env.BOT_TOKEN);
