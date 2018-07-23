@@ -290,4 +290,230 @@ channel.guild.owner.send(`<@!${channelremover.id}>
 
 
 
+
+
+  client.on('message',function(message) {
+    let toKick = message.mentions.users.first();
+    let toReason = message.content.split(" ").slice(2).join(" ");
+    let toEmbed = new Discord.RichEmbed()
+   if(message.content.startsWith(prefix + '+kick')) {
+       if(!message.member.hasPermission("KICK_MEMBERS")) return message.reply('**# - You dont have enough permissions!**');
+       if(toKick.bannable) return message.reply("**# - I cannot kick someone with a higher role than me!**");
+       if(!toReason) return message.reply("**# - Supply a reason!**")
+       if(toKick.id === message.author.id) return message.reply("**# You cannot kick yourself!**")
+       if(!message.guild.member(toKick).bannable) return message.reply("**# - I cannot ban this person!**")
+       let toEmbed;
+       toEmbed = new Discord.RichEmbed()
+       .setTitle("You have been kicked from a server!")
+       .setThumbnail(toKick.avatarURL)
+       .addField("**# - Server:**",message.guild.name,true)
+       .addField("**# - Reason:**",toReason,true)
+       .addField("**# - Kicked By:**",message.author,true)
+       if(message.member.hasPermission("KICK_MEMBERS")) return (
+           toKick.sendMessage({embed: toEmbed}).then(() => message.guild.member(toKick).kick()).then(() => message.channel.send(`**# Done! I kicked: ${toKick}**`))
+       )
+       }
+});
+
+
+
+
+ 
+  
+  client.on('message', message => {
+
+
+if (message.content === prefix + "+mutechannel") {
+if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('**You don’t have `Manage Messages` permissions**');
+           message.channel.overwritePermissions(message.guild.id, {
+         SEND_MESSAGES: false
+
+           }).then(() => {
+               message.reply("Channel Muted ✅ ")
+           });
+}
+  if (message.content === prefix + "+unmutechannel") {
+if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('**You don’t have `Manage Messages` permissions**');
+           message.channel.overwritePermissions(message.guild.id, {
+         SEND_MESSAGES: true
+
+           }).then(() => {
+               message.reply("Channel UnMuted ✅ ")
+           });
+}
+  
+
+});
+
+
+
+
+
+  
+  
+  client.on('message', eyad => {
+  if (eyad.content.startsWith('+vban')) {
+if (!eyad.member.hasPermission("MOVE_MEMBERS")) return eyad.channel.send("**انت لا تمتلك الخاصيه المطلوبه** | ❎ ");
+let men = eyad.mentions.users.first()
+let mas = eyad.author
+if(!men) return eyad.channel.send('`منشن شخص `');
+eyad.guild.channels.forEach(c => {
+c.overwritePermissions(men.id, {
+          CONNECT: false
+})
+    })
+const embed = new Discord.RichEmbed()
+.setColor("RANDOM")
+.setDescription(`**
+ <@${men.id}>
+لقد تم منع من دخول الرومات الصوتيه 
+بواسطة : <@${eyad.author.id}> **`)
+.setThumbnail("https://cdn.discordapp.com/attachments/408952032112803850/452090205793681419/fd684707fc14f41663f15ecebf089f06.png")
+          
+client.users.get(men.id).sendEmbed(embed)
+const Embed11 = new Discord.RichEmbed()
+.setColor("RANDOM")
+.setAuthor(eyad.guild.name, eyad.guild.iconURL)
+.setDescription(`          <@${men.id}>
+لقد تم منع من دخول الرومات الصوتيه 
+بواسطة : <@${eyad.author.id}> `)
+.setThumbnail("https://cdn.discordapp.com/attachments/408952032112803850/452090205793681419/fd684707fc14f41663f15ecebf089f06.png")
+eyad.channel.sendEmbed(Embed11).then(eyad => {eyad.delete(10000)})
+    }
+})// نهايه كود الباند الفويس
+
+
+
+
+
+
+  client.on('message', eyad => {
+  if (eyad.content.startsWith('+uvban')) {
+if (!eyad.member.hasPermission("MOVE_MEMBERS")) return eyad.channel.send("**انت لا تمتلك الخاصيه المطلوبه** | ❎ ");
+ let men = eyad.mentions.users.first()
+ let mas = eyad.author
+ if(!men) return eyad.channel.send('`منشن شخص `');
+ eyad.guild.channels.forEach(c => {
+ c.overwritePermissions(men.id, {
+         CONNECT: true
+ })
+    })
+const embed = new Discord.RichEmbed()
+.setColor("RANDOM")
+.setDescription(`**
+ <@${men.id}>
+ الان يمكنك الدخول الي الرومات الصوتيه :)
+بواسطة : <@${eyad.author.id}> **`)
+.setThumbnail("https://cdn.discordapp.com/attachments/408952032112803850/452093541003296788/start-button-hi.png")
+          
+client.users.get(men.id).sendEmbed(embed)
+const Embed11 = new Discord.RichEmbed()
+.setColor("RANDOM")
+.setAuthor(eyad.guild.name, eyad.guild.iconURL)
+.setDescription(`          <@${men.id}>
+الان يمكنك الدخول الي الرومات الصوتيه
+بواسطة : <@${eyad.author.id}>
+`)
+.setThumbnail("https://cdn.discordapp.com/attachments/408952032112803850/452093541003296788/start-button-hi.png")
+eyad.channel.sendEmbed(Embed11).then(eyad => {eyad.delete(15000)})
+    }
+}) // نهايه كود فك الباند الفويس
+  
+
+
+
+
+  client.on('message', eyad => {
+  if (eyad.content.startsWith('+uvban')) {
+if (!eyad.member.hasPermission("MOVE_MEMBERS")) return eyad.channel.send("**انت لا تمتلك الخاصيه المطلوبه** | ❎ ");
+ let men = eyad.mentions.users.first()
+ let mas = eyad.author
+ if(!men) return eyad.channel.send('`منشن شخص `');
+ eyad.guild.channels.forEach(c => {
+ c.overwritePermissions(men.id, {
+         CONNECT: true
+ })
+    })
+const embed = new Discord.RichEmbed()
+.setColor("RANDOM")
+.setDescription(`**
+ <@${men.id}>
+ الان يمكنك الدخول الي الرومات الصوتيه :)
+بواسطة : <@${eyad.author.id}> **`)
+.setThumbnail("https://cdn.discordapp.com/attachments/408952032112803850/452093541003296788/start-button-hi.png")
+          
+client.users.get(men.id).sendEmbed(embed)
+const Embed11 = new Discord.RichEmbed()
+.setColor("RANDOM")
+.setAuthor(eyad.guild.name, eyad.guild.iconURL)
+.setDescription(`          <@${men.id}>
+الان يمكنك الدخول الي الرومات الصوتيه
+بواسطة : <@${eyad.author.id}>
+`)
+.setThumbnail("https://cdn.discordapp.com/attachments/408952032112803850/452093541003296788/start-button-hi.png")
+eyad.channel.sendEmbed(Embed11).then(eyad => {eyad.delete(15000)})
+    }
+}) // نهايه كود فك الباند الفويس
+  
+
+
+
+
+  
+  client.on('message', message => {
+     if(!message.channel.guild) return;
+var prefix = "!";
+                if(message.content.startsWith(prefix + '+bots')) {
+
+    
+    if (message.author.bot) return;
+    let i = 1;
+        const botssize = message.guild.members.filter(m=>m.user.bot).map(m=>`${i++} - <@${m.id}>`);
+          const embed = new Discord.RichEmbed()
+          .setAuthor(message.author.tag, message.author.avatarURL)
+          .setDescription(`**Found ${message.guild.members.filter(m=>m.user.bot).size} bots in this Server**
+${botssize.join('\n')}`)
+.setFooter(client.user.username, client.user.avatarURL)
+.setTimestamp();
+message.channel.send(embed)
+
+}
+
+
+});
+
+
+
+
+  client.on('message', message => {
+if(!message.channel.guild) return;
+if (message.content.startsWith("$ping")) {
+    message.channel.sendMessage(`Pong ! \`${Date.now() - message.createdTimestamp} ms\`:watch:`);
+    }
+});
+  
+
+
+
+  client.on('message', ra3d => {
+var prefix = "+";
+                        let args = ra3d.content.split(" ").slice(1).join(" ")
+if(ra3d.content.startsWith(prefix + '+cc')) {
+    if(!args) return ra3d.channel.send('`يرجي اختيار كم لون `');
+             if (!ra3d.member.hasPermission('MANAGE_ROLES')) return ra3d.channel.sendMessage('`**⚠ | `[MANAGE_ROLES]` لا يوجد لديك صلاحية**'); 
+              ra3d.channel.send(`**✅ |Created __${args}__ Colors**`);
+                  setInterval(function(){})
+                    let count = 0;
+                    let ecount = 0;
+          for(let x = 1; x < `${parseInt(args)+1}`; x++){
+            ra3d.guild.createRole({name:x,
+              color: 'RANDOM'})
+              }
+            }
+       });
+
+
+
+
+
 client.login(process.env.BOT_TOKEN);
