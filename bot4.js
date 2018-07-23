@@ -542,6 +542,13 @@ if (command == "embed") {
 
 
 client.on('message', message => {
+client.on('message', message => {
+     if (message.content === "+help") {
+message.channel.sendMessage("****" + `  **
+شوف خاصك يا مدير :e_mail: :punch: 
+**`);
+    }
+});
 if (message.content.startsWith(prefix + 'help')) { /// This is The DMS Code Send The Help In DMS // Code By NotGucci
     let pages = [`
 ༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻
