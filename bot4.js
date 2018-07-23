@@ -552,11 +552,6 @@ message.channel.sendMessage("****" + `  **
 if (message.content.startsWith(prefix + 'help')) { /// This is The DMS Code Send The Help In DMS // Code By NotGucci
     let pages = [`
 	
-
-	
-	
-
-	
 ༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻
 
 :earth_africa: The Public Commands :earth_africa: 
