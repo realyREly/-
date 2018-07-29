@@ -539,7 +539,6 @@ if (command == "embed") {
 
 });
 
-
 client.on('message', message => {
 if (message.content.startsWith(prefix + 'help')) { /// This is The DMS Code Send The Help In DMS // Code By NotGucci
     let pages = [`
@@ -627,7 +626,7 @@ Click On ▶ To Go To Bot Info
 
 
 client.on('message', message => {
-if (message.content.startsWith(prefix + 'help')) { /// And This is The Channel One Send The Help In Channel // Code By NotGucci
+if (message.content.startsWith(prefix + 'Help')) { /// And This is The Channel One Send The Help In Channel // Code By NotGucci
     let pages = [`
 ༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻
 
