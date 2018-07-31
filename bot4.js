@@ -717,7 +717,6 @@ Click On ▶ To Go To Bot Info
 
 client.login(process.env.BOT_TOKEN);
 
-const Discord = require("discord.js");
 const ytdl = require("ytdl-core");
 const { Client1, Util } = require('discord.js');
 const getYoutubeID = require('get-youtube-id');
