@@ -462,8 +462,7 @@ eyad.channel.sendEmbed(Embed11).then(eyad => {eyad.delete(15000)})
   
   client.on('message', message => {
      if(!message.channel.guild) return;
-var prefix = "!";
-                if(message.content.startsWith(prefix + '+bots')) {
+                if(message.content.startsWith(prefix + 'bots')) {
 
     
     if (message.author.bot) return;
@@ -481,6 +480,7 @@ message.channel.send(embed)
 
 
 });
+
 
 
 
