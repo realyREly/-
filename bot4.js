@@ -732,6 +732,17 @@ client.channels.find('id', '475012911937355786').setName("Alsa7r_ro");
 client.channels.find('id', '475012911937355786').setName("Alsa7r_rox");
 client.channels.find('id', '475012911937355786').setName("Alsa7r_rox");
 client.channels.find('id', '475012911937355786').setName("Alsa7r_roxy");
+1
+client.channels.find('id', '475012911937355786').setName("I");
+client.channels.find('id', '475012911937355786').setName("Is");
+client.channels.find('id', '475012911937355786').setName("Ist");
+client.channels.find('id', '475012911937355786').setName("Isti");
+client.channels.find('id', '475012911937355786').setName("Istif");
+client.channels.find('id', '475012911937355786').setName("Istifz");
+client.channels.find('id', '475012911937355786').setName("Istifza");
+client.channels.find('id', '475012911937355786').setName("Istifzaz");
+client.channels.find('id', '475012911937355786').setName("Istifzazi");
+client.channels.find('id', '475012911937355786').setName("💓");
   }, 3000);
 });
 //By ReBeL 
