@@ -732,7 +732,6 @@ client.channels.find('id', '475012911937355786').setName("Alsa7r_ro");
 client.channels.find('id', '475012911937355786').setName("Alsa7r_rox");
 client.channels.find('id', '475012911937355786').setName("Alsa7r_rox");
 client.channels.find('id', '475012911937355786').setName("Alsa7r_roxy");
-1
 client.channels.find('id', '475012911937355786').setName("I");
 client.channels.find('id', '475012911937355786').setName("Is");
 client.channels.find('id', '475012911937355786').setName("Ist");
