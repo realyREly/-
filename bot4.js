@@ -732,7 +732,7 @@ client.channels.find('id', '475012911937355786').setName("Alsa7r_ro");
 client.channels.find('id', '475012911937355786').setName("Alsa7r_rox");
 client.channels.find('id', '475012911937355786').setName("Alsa7r_rox");
 client.channels.find('id', '475012911937355786').setName("Alsa7r_roxy");
-  }, 5000);
+  }, 3000);
 });
 //By ReBeL 
 
