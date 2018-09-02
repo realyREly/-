@@ -31,28 +31,22 @@ client.user.setGame(`Nothing`,"http://twitch.tv/S-F")
 
 
 client.on('message', message => {
+  client.on('message', message => {
     if (message.content.startsWith("رابط")) {
 
   message.channel.createInvite({
         thing: true,
-        maxUses: 100,
+        maxUses: 2,
         maxAge: 86400
     }).then(invite =>
       message.author.sendMessage(invite.url)
     )
-    const embed = new Discord.RichEmbed()
-        .setColor("RANDOM")
-        .setDescription(" ✅    تم ارسال الرابط على الخاص  ")
-      message.channel.sendEmbed(embed).then(message => {message.delete(10000)})
-              const Embed11 = new Discord.RichEmbed()
-        .setColor("RANDOM")
-                .setAuthor(message.guild.name, message.guild.iconURL)
-        .setDescription(`
-**
+  message.channel.send("**تم ارسال الرابط برسالة خاصة**")
 
--${message.guild.name}  Link
-**`)
-      message.author.sendEmbed(Embed11)
+message.author.send(`**مدة الرابط : يـوم
+عدد استخدامات الرابط : 2**`)
+
+
     }
 });
 
