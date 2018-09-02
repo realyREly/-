@@ -31,6 +31,25 @@ client.user.setGame(`Nothing`,"http://twitch.tv/S-F")
 
 
 
+client.on('message', message => {
+    if (!message.guild) return; 
+    if (message.content.startsWith("رابط")) {
+
+        message.channel.createInvite({
+        thing: true,
+        maxUses: 3,
+        maxAge: 86400
+    }).then(invite =>
+      message.author.sendMessage(invite.url)
+    )
+  message.channel.send(`** تم أرسال الرابط برسالة خاصة **`)
+
+      message.author.send(`**هذا الرابط لـ3 أشخاص و لمدة 24 ساعة **`)
+    }
+});
+
+
+
 
 client.on('message', message => {
     var args = message.content.split(/[ ]+/)
