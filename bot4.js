@@ -518,7 +518,7 @@ if(ra3d.content.startsWith(prefix + '+cc')) {
 
 
 client.on('message', message => {
-  if(message.content == "<@" + `${client.user.id}` + ">"){
+  if(message.content == "+help"){
     var embed = new Discord.RichEmbed() 
     .setAuthor(message.author.username)
     .setThumbnail(message.author.avatarURL)
