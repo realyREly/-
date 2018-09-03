@@ -524,10 +524,13 @@ client.on('message', message => {
  #colors  : قائمة الألوان
   ${prefix}bots : لمعرفة كم بوت في السيرفر
  ${prefix}pic  : لإظهار صورتك
+${prefix}bc  : لإرسال البردكسات
 
  أوامر ادارة السيرفرات 
  ${prefix}mute
  ${prefix}unmute
+${prefix}kick
+${prefix}ban
  ${prefix}clear 
  ${prefix}mutechannel : لتقفيل الشات
  ${prefix}unmutechannel  : لفتح الشات
