@@ -121,6 +121,7 @@ client.on('message', message => {
 
 client.on('message' , async (message) => {
        if(message.content.startsWith("+clear")) {
+if(!message.member.hasPermission('MANAGE_MESSAGES')) return 
            let args = message.content.split(" ").slice(1);
  if (isNaN(args[0])) return message.channel.send('**Please supply a valid amount of messages to purge**');
   if (args[0] > 100) return message.channel.send('**Please supply a number less than 100**');
