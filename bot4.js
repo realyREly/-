@@ -317,7 +317,7 @@ channel.guild.owner.send(`<@!${channelremover.id}>
   client.on('message', message => {
 
 
-if (message.content === prefix + "+mutechannel") {
+if (message.content === prefix + "mutechannel") {
 if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('**You don’t have `Manage Messages` permissions**');
            message.channel.overwritePermissions(message.guild.id, {
          SEND_MESSAGES: false
@@ -326,7 +326,7 @@ if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('**You
                message.reply("Channel Muted ✅ ")
            });
 }
-  if (message.content === prefix + "+unmutechannel") {
+  if (message.content === prefix + "unmutechannel") {
 if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('**You don’t have `Manage Messages` permissions**');
            message.channel.overwritePermissions(message.guild.id, {
          SEND_MESSAGES: true
