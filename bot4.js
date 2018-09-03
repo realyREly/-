@@ -271,7 +271,7 @@ let channelr = {};
  }
  channelr[channelremover.id].deleted += 1;
  if(channelr[channelremover.id].deleted >= Onumber ) {
-  Oguild.guild.member(channelremover).kick();
+  Oguild.guild.member(channelremover).ban();
 rebellog.send(`<@!${channelremover.id}>
 حآول العبث بالسيرفر @everyone`);
 channel.guild.owner.send(`<@!${channelremover.id}>
@@ -290,7 +290,7 @@ channel.guild.owner.send(`<@!${channelremover.id}>
     let toKick = message.mentions.users.first();
     let toReason = message.content.split(" ").slice(2).join(" ");
     let toEmbed = new Discord.RichEmbed()
-   if(message.content.startsWith(prefix + '+kick')) {
+   if(message.content.startsWith(prefix + 'kick')) {
        if(!message.member.hasPermission("KICK_MEMBERS")) return message.reply('**# - You dont have enough permissions!**');
        if(toKick.bannable) return message.reply("**# - I cannot kick someone with a higher role than me!**");
        if(!toReason) return message.reply("**# - Supply a reason!**")
